@@ -345,4 +345,3 @@ The biggest upgrade would be switching from JPEG-over-WebSocket to WebRTC, which
 **Built with Python, React, Docker, and Playwright**
 
 </div>
-

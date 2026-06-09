@@ -1,0 +1,13 @@
+services:
+  orchestrator:
+    build:
+      context: ./orchestrator
+    ports:
+      - "8080:8080"
+    volumes:
+      # Windows Docker Desktop: mount the named pipe
+      - //var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    restart: unless-stopped
